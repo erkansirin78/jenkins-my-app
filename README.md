@@ -4,7 +4,7 @@
 docker build -t iris_classifier .
 
 #RUN
- docker run --name iris -p 8082:8082 -d iris_classifier
+ docker run --name iris -v $(PWD)/saved_models:/app/saved_models -p 8082:8082 -d iris_classifier
 
 # API USAGE
 # METHOD GET
