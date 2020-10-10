@@ -1,15 +1,15 @@
 from flask import Flask, jsonify
 from flask_restful import Resource, Api, reqparse
-import glob
 import pandas as pd
 import numpy as np
 import joblib
+import argparse
 
 app = Flask(__name__)
 
 api = Api(app=app)
-model = joblib.load("/app/saved_models/01.knn_with_iris_dataset.pkl")
-labelencoder_y = joblib.load("/app/saved_models/01.knn_with_iris_label_encoder.pkl")
+model = joblib.load("saved_models/01.knn_with_iris_dataset.pkl")
+labelencoder_y = joblib.load("saved_models/01.knn_with_iris_label_encoder.pkl")
 
 class Classify(Resource):
     parser = reqparse.RequestParser()

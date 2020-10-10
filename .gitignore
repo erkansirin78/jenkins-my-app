@@ -1,1 +1,3 @@
-jenkins_volume
+.idea/
+__pycache__/
+

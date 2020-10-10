@@ -1,5 +1,4 @@
 FROM python:3.6
-MAINTAINER Erkan SIRIN
 #RUN useradd -ms /bin/bash admin
 #USER admin
 
