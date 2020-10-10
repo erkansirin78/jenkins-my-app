@@ -19,9 +19,8 @@ http://127.0.0.1/:8082/iris/
     "result": "[{\"label\":\"Iris-setosa\"}]"
 }
 
-#
-=======
-# iris_classifier
-
-This project is for iris classification model deployment.
->>>>>>> 8383efc68564cd5b9b31b7eafb7f2894461601f2
+# prediction with curl
+```
+(venvspark) [train@localhost flask_ci_cd]$ curl localhost:8082/iris -H 'Content-Type: application/json' -XGET -d '{"SepalLengthCm":5.1, "SepalWidthCm":3.5, "PetalLengthCm":1.4 , "PetalWidthCm": 0.2}'
+{"result":"[{\"label\":\"Iris-setosa\"}]"}
+```
