@@ -54,7 +54,11 @@ class Classify(Resource):
         out = self.return_prediction()
         return jsonify({'result': out})
 
+class Welcome(Resource):
+    def get(self):
+        return jsonify("Welcome Iris Classification App")
 
 api.add_resource(Classify, '/iris')  # http://127.0.0.1:8082/iris
+api.add_resource(Welcome, '/')  # http://127.0.0.1:8082/iris
 
 app.run(host="0.0.0.0", port=8082)
